@@ -28,7 +28,7 @@ task writeNewPom {
     doLast {
         pom {
             project {
-                groupId 'com.aungkyawpaing.rabbkt'
+                groupId 'com.aungkyawpaing'
                 artifactId 'rabbkt'
                 version '1.0.0'
             }
