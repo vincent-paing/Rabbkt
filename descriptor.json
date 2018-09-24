@@ -1,6 +1,6 @@
 {
   "package": {
-    "name": "auto-upload",
+    "name": "rabbkt",
     "repo": "Rabbkt",
     "subject": "vincent-paing",
     "desc": "Efficient ZG<=> Unicode converter",
