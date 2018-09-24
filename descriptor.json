@@ -25,9 +25,8 @@
 
   "files": [
     {
-      "includePattern": "build/libs(.*)*/(.*\\.jar)",
-      "excludePattern": ".*/do-not-deploy/.*",
-      "uploadPattern": "rabbkt/$2"
+      "includePattern": "build/libs/(.*)",
+      "uploadPattern": "com/aungkyawpaing/rabbkt/1.0.0/$1"
     }
   ],
   "publish": true
