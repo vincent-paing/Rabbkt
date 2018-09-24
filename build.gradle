@@ -8,6 +8,7 @@ version '1.0.0'
 
 repositories {
     mavenCentral()
+    jcenter()
 }
 
 dependencies {
@@ -31,6 +32,14 @@ task writeNewPom {
                 artifactId 'rabbkt'
                 version '1.0.0'
             }
-        }.writeTo("$buildDir/libs/pom.xml")
+        }.writeTo("$buildDir/libs/rabbkt-1.0.0.pom")
+    }
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "file://localhost/tmp/myRepo/")
+        }
     }
 }
