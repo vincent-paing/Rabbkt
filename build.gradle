@@ -1,6 +1,7 @@
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.2.70'
 }
+apply plugin: 'maven'
 
 group 'com.aungkyawpaing.rabbkt'
 version '1.0.0'
@@ -20,4 +21,16 @@ compileKotlin {
 }
 compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
+}
+
+task writeNewPom {
+    doLast {
+        pom {
+            project {
+                groupId 'com.aungkyawpaing.rabbkt'
+                artifactId 'rabbkt'
+                version '1.0.0'
+            }
+        }.writeTo("$buildDir/libs/pom.xml")
+    }
 }

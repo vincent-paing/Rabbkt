@@ -2,6 +2,7 @@ package benchmark
 
 import RabbktConverter
 import benchmark.helper.benchMark
+import org.junit.After
 import org.junit.Before
 import org.junit.Test
 import java.io.File
@@ -50,8 +51,14 @@ class BenchmarkTest {
 
     @Test
     fun testRabbkt() {
-        benchMark("Rabbit", WARM_UP_ROUNDS, TOTAL_ROUNDS) {
+        benchMark("Rabbkt", WARM_UP_ROUNDS, TOTAL_ROUNDS) {
             RabbktConverter.unicodeToZawgyi(stringToBeConverted)
         }
+    }
+
+    @After
+    fun tearDown() {
+        possibleStringArray.clear()
+        stringToBeConverted = ""
     }
 }
