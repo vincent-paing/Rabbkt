@@ -1,0 +1,34 @@
+{
+  "package": {
+    "name": "auto-upload",
+    "repo": "Rabbkt",
+    "subject": "vincent-paing",
+    "desc": "Efficient ZG<=> Unicode converter",
+    "issue_tracker_url": "https://github.com/vincent-paing/Rabbkt/issues",
+    "vcs_url": "https://github.com/vincent-paing/Rabbkt.git",
+    "github_use_tag_release_notes": true,
+    "github_release_notes_file": "RELEASE.txt",
+    "licenses": [
+      "WTFPL"
+    ],
+    "labels": [
+      "kotlin",
+      "myanmar"
+    ],
+    "public_download_numbers": false,
+    "public_stats": false
+  },
+
+  "version": {
+    "name": "1.0.0"
+  },
+
+  "files": [
+    {
+      "includePattern": "build/libs(.*)*/(.*\\.jar)",
+      "excludePattern": ".*/do-not-deploy/.*",
+      "uploadPattern": "rabbkt/$2"
+    }
+  ],
+  "publish": true
+}

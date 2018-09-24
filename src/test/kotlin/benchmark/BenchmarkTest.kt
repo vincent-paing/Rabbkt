@@ -14,7 +14,7 @@ class BenchmarkTest {
     var stringToBeConverted = ""
 
     companion object {
-        const val CHARACTER_SIZE = 1000000
+        const val CHARACTER_SIZE = 100000
         const val WARM_UP_ROUNDS = 5
         const val TOTAL_ROUNDS = 10
     }
