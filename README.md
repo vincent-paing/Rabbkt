@@ -10,9 +10,7 @@ If you use gradle, then include
 
 ```
 repositories {
-    maven {
-        url  "https://dl.bintray.com/vincent-paing/maven" 
-    }
+    jcenter()
 }
 
 compile 'com.aungkyawpaing.rabbkt:rabbkt:1.0.0'
@@ -46,7 +44,7 @@ myRuleBaseConverter.convert(yourString)
 - [Burmese word lists](https://github.com/kanaung/wordlists)
 
 
-## Licnese
+## License
 
 ```
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
