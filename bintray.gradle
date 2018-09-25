@@ -53,7 +53,7 @@ publishing {
             artifact javadocJar
             groupId "$artifactGroup"
             artifactId "$artifactId"
-            version '1.0.0'
+            version '1.0.1'
             pom.withXml {
                 def root = asNode()
                 root.appendNode('description', 'Efficient Zawgyi <=> Unicode Converter')
