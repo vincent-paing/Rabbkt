@@ -1,7 +1,16 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.+'
+    }
+}
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '1.2.70'
 }
-apply plugin: 'maven'
+apply from: 'bintray.gradle'
+apply plugin: 'java'
 
 group 'com.aungkyawpaing.rabbkt'
 version '1.0.0'
@@ -13,8 +22,8 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    compile "junit:junit:4.12"
-    compile 'org.json:json:20180813'
+    testImplementation "junit:junit:4.12"
+    testImplementation 'org.json:json:20180813'
 }
 
 compileKotlin {
@@ -24,22 +33,16 @@ compileTestKotlin {
     kotlinOptions.jvmTarget = "1.8"
 }
 
-task writeNewPom {
-    doLast {
-        pom {
-            project {
-                groupId 'com.aungkyawpaing'
-                artifactId 'rabbkt'
-                version '1.0.0'
-            }
-        }.writeTo("$buildDir/libs/rabbkt-1.0.0.pom")
-    }
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: "file://localhost/tmp/myRepo/")
-        }
-    }
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = 'sources'
+    from sourceSets.main.allSource
+}
+
+artifacts {
+    archives sourcesJar, javadocJar
 }

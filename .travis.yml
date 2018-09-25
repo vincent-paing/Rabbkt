@@ -5,12 +5,5 @@ jdk:
 
 script:
   - ./gradlew assemble
-  - ./gradlew writeNewPom
   - ./gradlew test
-
-deploy:
-  provider: bintray
-  file: ./descriptor.json
-  user: vincent-paing
-  key: $BINTRAY_API_KEY
-  skip_cleanup: true # to upload artifacts created during the build
+  - ./gradlew bintrayUpload

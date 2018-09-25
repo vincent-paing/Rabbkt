@@ -1,0 +1,68 @@
+apply plugin: 'com.jfrog.bintray'
+apply plugin: 'maven-publish'
+apply plugin: 'java'
+
+def artifactGroup = 'com.aungkyawpaing.rabbkt'
+def buildVersion = '1.0.0'
+def artifactName = 'rabbkt'
+def pomName = artifactName + '-' + buildVersion + ".pom"
+def pomFilePath = "$buildDir/libs/$pomName"
+
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_API_KEY')
+    publications = ['MyPublication']
+    configurations = ['archives']
+    pkg {
+        repo = 'maven'
+        name = 'rabbkt'
+        licenses = ['WTFPL']
+        vcsUrl = 'https://github.com/vincent-paing/Rabbkt.git'
+        version {
+            name = '1.0.0'
+        }
+    }
+}
+
+// Create the pom configuration:
+def pomConfig = {
+    licenses {
+        license {
+            name "DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE "
+            url "http://www.wtfpl.net/txt/copying"
+        }
+    }
+    developers {
+        developer {
+            id "aungkyawpaing"
+            name "aungkyawpaing"
+            email "dev@aungkyawpaing.com"
+        }
+    }
+
+    scm {
+        url "https://github.com/vincent-paing/Rabbkt"
+    }
+}
+
+publishing {
+    publications {
+        MyPublication(MavenPublication) {
+            from components.java
+            artifact sourcesJar
+            artifact javadocJar
+            groupId "$artifactGroup"
+            artifactId "$artifactId"
+            version '1.0.0'
+            pom.withXml {
+                def root = asNode()
+                root.appendNode('description', 'Efficient Zawgyi <=> Unicode Converter')
+                root.appendNode('name', 'Rabbkt')
+                root.appendNode('url', 'https://github.com/vincent-paing/Rabbkt')
+                root.children().last() + pomConfig
+            }
+        }
+    }
+}
+
