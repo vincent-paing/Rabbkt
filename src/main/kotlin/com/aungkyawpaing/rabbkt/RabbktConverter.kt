@@ -1,4 +1,6 @@
-import converter.RuleBasedStringConverter
+package com.aungkyawpaing.rabbkt
+
+import com.aungkyawpaing.rabbkt.converter.RuleBasedStringConverter
 
 /**
  * Utility class for easily converting between Zawgyi and Unicode

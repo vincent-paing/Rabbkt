@@ -1,3 +1,5 @@
+package com.aungkyawpaing.rabbkt
+
 /**
  * Zawgyi to Unicode Rule Set
  */

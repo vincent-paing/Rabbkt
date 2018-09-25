@@ -1,4 +1,4 @@
-package converter
+package com.aungkyawpaing.rabbkt.converter
 
 /**
  * Implementation of [StringConverter]
