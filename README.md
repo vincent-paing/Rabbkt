@@ -13,7 +13,7 @@ repositories {
     jcenter()
 }
 
-compile 'com.aungkyawpaing.rabbkt:rabbkt:1.0.0'
+compile 'com.aungkyawpaing.rabbkt:rabbkt:1.0.1'
 ```
 
 ### Conversion

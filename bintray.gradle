@@ -3,9 +3,8 @@ apply plugin: 'maven-publish'
 apply plugin: 'java'
 
 def artifactGroup = 'com.aungkyawpaing.rabbkt'
-def buildVersion = '1.0.0'
+def buildVersion = '1.0.1'
 def artifactName = 'rabbkt'
-def pomName = artifactName + '-' + buildVersion + ".pom"
 
 
 bintray {
@@ -20,7 +19,7 @@ bintray {
         licenses = ['WTFPL']
         vcsUrl = 'https://github.com/vincent-paing/Rabbkt.git'
         version {
-            name = '1.0.0'
+            name = '1.0.1'
         }
     }
 }

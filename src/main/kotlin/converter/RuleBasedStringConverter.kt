@@ -4,7 +4,7 @@ package converter
  * Implementation of [StringConverter]
  * Uses a provided rule set to convert string
  */
-class RuleBasedStringConverter constructor(private val rules: Map<Regex, String>) :
+public class RuleBasedStringConverter constructor(private val rules: Map<Regex, String>) :
         StringConverter {
 
     /**

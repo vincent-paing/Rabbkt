@@ -4,7 +4,7 @@ import converter.RuleBasedStringConverter
  * Utility class for easily converting between Zawgyi and Unicode
  * Wraps Rules in [Rule] for both Zawgyi and Unicode
  */
-object RabbktConverter {
+public object RabbktConverter {
 
     private val zawgyiToUnicodeConverter = RuleBasedStringConverter(zgToUnicodeRules)
     private val unicodeToZawgyiConverter = RuleBasedStringConverter(unicodeToZawgyiRules)
