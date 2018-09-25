@@ -30,7 +30,7 @@ For Unicode to Zawgyi, use
 
 ### Custom Rule
 
-Create an instance of [RuleBasedStringConverter](https://github.com/vincent-paing/Rabbkt/blob/master/src/main/java/converter/RuleBasedStringConverter.kt) by providing a map of Regex and String through its constructor
+Create an instance of [RuleBasedStringConverter](https://github.com/vincent-paing/Rabbkt/blob/master/src/main/kotlin/converter/RuleBasedStringConverter.kt) by providing a map of Regex and String through its constructor
 
 And then call the convert function with your own instance
 
