@@ -7,3 +7,4 @@ script:
   - ./gradlew assemble
   - ./gradlew test
   - ./gradlew bintrayUpload
+  - ./gradlew bintrayPublish

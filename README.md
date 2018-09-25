@@ -15,7 +15,7 @@ repositories {
     }
 }
 
-compile 'com.aungkyawpaing:rabbkt:1.0.0'
+compile 'com.aungkyawpaing.rabbkt:rabbkt:1.0.0'
 ```
 
 ### Conversion

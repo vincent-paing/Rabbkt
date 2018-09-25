@@ -6,7 +6,6 @@ def artifactGroup = 'com.aungkyawpaing.rabbkt'
 def buildVersion = '1.0.0'
 def artifactName = 'rabbkt'
 def pomName = artifactName + '-' + buildVersion + ".pom"
-def pomFilePath = "$buildDir/libs/$pomName"
 
 
 bintray {
@@ -14,6 +13,7 @@ bintray {
     key = System.getenv('BINTRAY_API_KEY')
     publications = ['MyPublication']
     configurations = ['archives']
+    override = true
     pkg {
         repo = 'maven'
         name = 'rabbkt'
