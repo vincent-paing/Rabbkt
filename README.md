@@ -1,10 +1,22 @@
+[ ![Download](https://api.bintray.com/packages/vincent-paing/maven/rabbkt/images/download.svg) ](https://bintray.com/vincent-paing/maven/rabbkt/_latestVersion)
+
 # Rabbkt
 
 Rabbkt is a Kotlin implemenation of [Rabbit](https://github.com/Rabbit-Converter/Rabbit) using HashMap as rules instead of parsing json for faster processing. It also allows the user to change the rule easily by providing a generic impelemenation of Rule-Based conversion. 
 
 ## Usage
 
-Copy the files under src/main into your project
+If you use gradle, then include
+
+```
+repositories {
+    maven {
+        url  "https://dl.bintray.com/vincent-paing/maven" 
+    }
+}
+
+compile 'com.aungkyawpaing:rabbkt:1.0.0'
+```
 
 ### Conversion
 
