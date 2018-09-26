@@ -1,4 +1,4 @@
-[ ![Download](https://api.bintray.com/packages/vincent-paing/maven/rabbkt/images/download.svg) ](https://bintray.com/vincent-paing/maven/rabbkt/_latestVersion)
+[ ![Download](https://api.bintray.com/packages/vincent-paing/maven/rabbkt/images/download.svg) ](https://bintray.com/vincent-paing/maven/rabbkt/_latestVersion) [![Build Status](https://travis-ci.com/vincent-paing/Rabbkt.svg?branch=master)](https://travis-ci.com/vincent-paing/Rabbkt)
 
 # Rabbkt
 
