@@ -1,4 +1,4 @@
-package benchmark
+package com.aungkyawpaing.rabbit.benchmark
 
 import org.json.JSONException
 import org.json.JSONArray

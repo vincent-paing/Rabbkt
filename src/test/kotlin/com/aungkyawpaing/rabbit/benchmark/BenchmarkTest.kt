@@ -1,7 +1,7 @@
-package benchmark
+package com.aungkyawpaing.rabbit.benchmark
 
-import RabbktConverter
-import benchmark.helper.benchMark
+import com.aungkyawpaing.rabbit.benchmark.helper.benchMark
+import com.aungkyawpaing.rabbkt.RabbktConverter
 import org.junit.After
 import org.junit.Before
 import org.junit.Test

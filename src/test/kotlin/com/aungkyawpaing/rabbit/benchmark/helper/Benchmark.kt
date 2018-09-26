@@ -1,4 +1,4 @@
-package benchmark.helper
+package com.aungkyawpaing.rabbit.benchmark.helper
 
 class Benchmark(private val tag: String) {
 
