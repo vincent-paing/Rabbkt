@@ -8,6 +8,14 @@ class RabbktConverterTest {
     val unicodeString = "သီဟိုဠ်မှ ဉာဏ်ကြီးရှင်သည် အာယုဝဍ္ဎနဆေးညွှန်းစာကို ဇလွန်ဈေးဘေး ဗာဒံပင်ထက် အဓိဋ္ဌာန်လျက် ဂဃနဏဖတ်ခဲ့သည်။"
 
     @Test
+    fun unicodeWithZeroWidthSpacesToZawgyiTest() {
+        val expected = zawgyiString
+        val actual = RabbktConverter.unicodeToZawgyi("\u200B${unicodeString}\u200B")
+
+        assertEquals(expected, actual)
+    }
+
+    @Test
     fun zawgyiToUnicodeTest() {
         val expected = unicodeString
         val actual = RabbktConverter.zawgyiToUnicode(zawgyiString)
