@@ -127,6 +127,7 @@ val zgToUnicodeRules = mapOf(
  * Unicode to Zawgyi Rule set
  */
 val unicodeToZawgyiRules = mapOf(
+        Regex("\\p{Cf}") to "",
         Regex("င်္") to "ၤ",
         Regex("္တွ") to "႖",
         Regex("ါ်") to "ၚ",
